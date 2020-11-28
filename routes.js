@@ -28,10 +28,8 @@ router.get("/tentativas/:id", async (req, res) => {
   }
 });
 
-router.post('/likes/', function(req, res, next) {
-  var db = require("../db.js");
-  var likes = db.Mongoose.model('usercollection', db.userSchema, 'usercollection');
-  var newlike = ({name: req.body.name});
+router.post('/likes/', async(req, res) => {
+  var newlike = new Tentativa({name: req.body.art});
   console.log(newlike);
   newlike.save(function (err){
     if (err) {
