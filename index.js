@@ -11,7 +11,7 @@ require('dotenv').config();
 // });
 
 mongoose
-	.connect('mongodb://localhost:27017/proj2', { useNewUrlParser: true }) //to run locally mongodb://localhost:27017/proj2
+	.connect('mongodb://localhost:27017/spotify-APP-Backend', { useNewUrlParser: true }) //to run locally mongodb://localhost:27017/proj2
 	.then(() => {
 		const app = express();
 		app.use(cors());
