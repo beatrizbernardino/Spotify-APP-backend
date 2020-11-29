@@ -31,15 +31,8 @@ router.get('/tentativas/:id', async (req, res) => {
 router.post('/likes/', async (req, res) => {
 	var newlike = new Tentativa({ name: req.body.art });
 	console.log(newlike);
-	newlike.save(function(err) {
-		if (err) {
-			res.status(500).json({ error: err.message });
-			res.end();
-			return;
-		}
-		res.json(newlike);
-		res.end();
-	});
+	newlike.save();
+	res.send(newlike);
 });
 
 module.exports = router;
