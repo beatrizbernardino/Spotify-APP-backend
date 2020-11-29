@@ -7,7 +7,7 @@ require('dotenv').config();
 const aws = require('aws-sdk');
 
 let s3 = new aws.S3({
-	mongo_url: process.env.mongo_connection
+	mongo_url: process.env.MONGO_CONNECTION
 });
 
 mongoose
