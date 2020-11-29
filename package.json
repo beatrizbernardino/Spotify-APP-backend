@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "aws": "0.0.3-2",
+    "aws-sdk": "^2.799.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "dotenv-safe": "^8.2.0",
