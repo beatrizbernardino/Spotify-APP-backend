@@ -29,10 +29,15 @@ router.get('/tentativas/:id', async (req, res) => {
 });
 
 router.post('/likes/', async (req, res) => {
-	var newlike = new Tentativa({ name: req.body.art });
-	console.log(newlike);
-	newlike.save();
-	res.send(newlike);
+	try {
+		var newlike = new Tentativa({ name: req.body.art });
+
+		console.log(newlike);
+		newlike.save();
+		res.send(newlike);
+	} catch (error) {
+		console.log(error);
+	}
 });
 
 module.exports = router;
